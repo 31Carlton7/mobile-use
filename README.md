@@ -2,7 +2,7 @@
 
 **AI-powered mobile task automation using natural language**
 
-Execute complex tasks on mobile apps by simply describing what you want to do. mobile-use uses GPT-4o vision to see your screen and Maestro to control the device.
+Execute complex tasks on mobile apps by simply describing what you want to do. mobile-use uses GPT-5.2 Pro vision to see your screen and Maestro to control the device.
 
 ```bash
 mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with bullet points for agenda items"
@@ -22,7 +22,7 @@ mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with 
 
 - **Node.js** 18+
 - **macOS** (for iOS) or **macOS/Linux/Windows** (for Android)
-- **OpenAI API Key** with GPT-4o access
+- **OpenAI API Key** with GPT-5.2 Pro access
 - **Maestro CLI** (auto-installed via `mobile-use install-maestro`)
 
 ### For iOS Simulator
@@ -39,11 +39,16 @@ mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with 
 ## 🚀 Installation
 
 ```bash
-# Install from npm
-npm install -g mobile-use
+# Install by Cloning
+git clone https://github.com/31Carlton7/mobile-use
 
 # Set your OpenAI API key
 export OPENAI_API_KEY=your_api_key_here
+
+# Install, Build, and link
+npm i
+npm run build
+npm link
 
 # Install Maestro CLI
 mobile-use install-maestro
@@ -136,14 +141,10 @@ mobile-use com.example.app "Create a note" \
 |--------|-------------|---------|
 | `-t, --task <task>` | Task to execute (when bundleId is omitted) | - |
 | `-m, --max-steps <n>` | Maximum steps before timeout | `100` |
-| `--model <name>` | OpenAI model to use | `gpt-4o` |
 | `--device <id>` | Android device ID | - |
 | `--ios-device <udid>` | Physical iOS device UDID | - |
 | `--team-id <id>` | Apple Developer Team ID | - |
 | `--app-file <path>` | Path to .ipa file | - |
-| `--driver-port <port>` | iOS driver port | `6001` |
-| `--criteria <...>` | Success criteria (can specify multiple) | - |
-| `--constraint <...>` | Constraints (can specify multiple) | - |
 
 ## 🎬 Available Actions
 
@@ -170,10 +171,10 @@ The AI can perform these actions on your device:
 ## 🏗️ How It Works
 
 ```
-┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
-│   mobile-use    │────▶│   GPT-4o     │────▶│    Maestro      │
-│   (CLI/Node)    │     │  (Vision AI) │     │   (Automation)  │
-└─────────────────┘     └──────────────┘     └─────────────────┘
+┌─────────────────┐     ┌────────────────┐     ┌─────────────────┐
+│   mobile-use    │────▶│   GPT-5.2 Pro  │────▶│    Maestro      │
+│   (CLI/Node)    │     │  (Vision AI)   │     │   (Automation)  │
+└─────────────────┘     └────────────────┘     └─────────────────┘
         │                      │                      │
         │                      │                      ▼
         │                      │              ┌───────────────┐
