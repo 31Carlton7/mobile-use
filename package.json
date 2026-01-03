@@ -1,0 +1,60 @@
+{
+  "name": "mobile-use",
+  "version": "1.0.0",
+  "description": "AI-powered mobile task automation using Maestro and Gemini",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "mobile-use": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "clean": "rm -rf dist",
+    "install-maestro": "tsx src/utils/install-maestro.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "mobile-automation",
+    "maestro",
+    "gemini",
+    "cli",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.2",
+    "@ai-sdk/openai": "^3.0.2",
+    "ai": "^6.0.5",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "ora": "^8.1.1",
+    "picocolors": "^1.1.1",
+    "playwright": "^1.57.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.1"
+  }
+}
