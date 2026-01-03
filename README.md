@@ -2,7 +2,7 @@
 
 **AI-powered mobile task automation using natural language**
 
-Execute complex tasks on mobile apps by simply describing what you want to do. mobile-use uses GPT-5.2 Pro vision to see your screen and Maestro to control the device.
+Introducing the Claude Computer Use for *Mobile Apps*. Execute complex tasks on mobile apps by simply describing what you want to do. mobile-use uses GPT-5.2 Pro vision to see your screen and Maestro to control the device.
 
 **[Demo Video](https://drive.google.com/file/d/114EcATHluSHBV1mOlnM5uq7-Ob-TosY9/view)**
 
