@@ -8,6 +8,34 @@ Execute complex tasks on mobile apps by simply describing what you want to do. m
 mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with bullet points for agenda items"
 ```
 
+## 🏗️ How It Works
+
+```
+┌─────────────────┐     ┌────────────────┐     ┌─────────────────┐
+│   mobile-use    │────▶│   GPT-5.2 Pro  │────▶│    Maestro      │
+│   (CLI/Node)    │     │  (Vision AI)   │     │   (Automation)  │
+└─────────────────┘     └────────────────┘     └─────────────────┘
+        │                      │                      │
+        │                      │                      ▼
+        │                      │              ┌───────────────┐
+        │                      │              │   Device      │
+        │                      │              │ (iOS/Android) │
+        │                      │              └───────────────┘
+        │                      │                      │
+        ▼                      ▼                      ▼
+   1. Capture          2. Analyze &           3. Execute
+   Screenshot          Decide Action          Action
+```
+
+**Loop:**
+1. **Observe** - Take a screenshot of the current screen
+2. **Decide** - GPT-4o analyzes the image and decides the next action
+3. **Execute** - Maestro performs the action on the device
+4. **Repeat** - Until task is complete or max steps reached
+
+**Why use GPT 5.2?**
+GPT 5.2 has the highest recorded [ScreenSpot Pro](https://llm-stats.com/benchmarks/screenspot-pro) score of 86.3%. This is critical for analysis as we need to ensure we get the highest accurate coordinates for completing commands as well as critically understanding what's going on in a screen.
+
 ## ✨ Features
 
 - 🧠 **Vision-First AI** - Uses GPT-4o to understand screenshots and decide actions
@@ -168,31 +196,6 @@ The AI can perform these actions on your device:
 | `launchApp` | Switch to another app | `launchApp("com.other.app")` |
 | `stopApp` | Close an app | `stopApp("com.other.app")` |
 
-## 🏗️ How It Works
-
-```
-┌─────────────────┐     ┌────────────────┐     ┌─────────────────┐
-│   mobile-use    │────▶│   GPT-5.2 Pro  │────▶│    Maestro      │
-│   (CLI/Node)    │     │  (Vision AI)   │     │   (Automation)  │
-└─────────────────┘     └────────────────┘     └─────────────────┘
-        │                      │                      │
-        │                      │                      ▼
-        │                      │              ┌───────────────┐
-        │                      │              │   Device      │
-        │                      │              │ (iOS/Android) │
-        │                      │              └───────────────┘
-        │                      │                      │
-        ▼                      ▼                      ▼
-   1. Capture          2. Analyze &           3. Execute
-   Screenshot          Decide Action          Action
-```
-
-**Loop:**
-1. **Observe** - Take a screenshot of the current screen
-2. **Decide** - GPT-4o analyzes the image and decides the next action
-3. **Execute** - Maestro performs the action on the device
-4. **Repeat** - Until task is complete or max steps reached
-
 ## 📱 Physical iOS Device Setup
 
 ### Prerequisites
@@ -326,5 +329,5 @@ MIT
 ## 🙏 Acknowledgments
 
 - [Maestro](https://maestro.mobile.dev) - Mobile UI automation framework
-- [OpenAI GPT-4o](https://openai.com) - Vision-language model
+- [OpenAI GPT-5.2 Pro](https://openai.com) - Vision-language model
 - [maestro-ios-device](https://github.com/devicelab-dev/maestro-ios-device) - Physical iOS device support
