@@ -4,11 +4,13 @@
 
 Execute complex tasks on mobile apps by simply describing what you want to do. mobile-use uses GPT-5.2 Pro vision to see your screen and Maestro to control the device.
 
+**[Demo Video](https://drive.google.com/file/d/114EcATHluSHBV1mOlnM5uq7-Ob-TosY9/view)**
+
 ```bash
 mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with bullet points for agenda items"
 ```
 
-## 🏗️ How It Works
+## How It Works
 
 ```
 ┌─────────────────┐     ┌────────────────┐     ┌─────────────────┐
@@ -33,20 +35,20 @@ mobile-use com.apple.mobilenotes "Create a new note titled 'Meeting Notes' with 
 3. **Execute** - Maestro performs the action on the device
 4. **Repeat** - Until task is complete or max steps reached
 
-**Why use GPT 5.2?**
+##### Why use GPT 5.2?
 GPT 5.2 has the highest recorded [ScreenSpot Pro](https://llm-stats.com/benchmarks/screenspot-pro) score of 86.3%. This is critical for analysis as we need to ensure we get the highest accurate coordinates for completing commands as well as critically understanding what's going on in a screen.
 
-## ✨ Features
+## Features
 
-- 🧠 **Vision-First AI** - Uses GPT-4o to understand screenshots and decide actions
-- 📝 **Natural Language Tasks** - Describe what you want in plain English
-- 📱 **Cross-Platform** - Works with iOS simulators and Android devices/emulators
-- 🔌 **Physical iOS Devices** - Supports real iPhones via `maestro-ios-device`
-- 🔄 **Multi-App Workflows** - Switch between apps to complete complex tasks
-- 🎯 **Smart Recovery** - Detects when stuck and tries alternative approaches
-- ⚡ **Fast Execution** - Optimized for speed with minimal overhead
+- **Vision-First AI** - Uses GPT-4o to understand screenshots and decide actions
+- **Natural Language Tasks** - Describe what you want in plain English
+- **Cross-Platform** - Works with iOS simulators and Android devices/emulators
+- **Physical iOS Devices** - Supports real iPhones via `maestro-ios-device`
+- **Multi-App Workflows** - Switch between apps to complete complex tasks
+- **Smart Recovery** - Detects when stuck and tries alternative approaches
+- **Fast Execution** - Optimized for speed with minimal overhead
 
-## 📋 Requirements
+## Requirements
 
 - **Node.js** 18+
 - **macOS** (for iOS) or **macOS/Linux/Windows** (for Android)
@@ -64,7 +66,7 @@ GPT 5.2 has the highest recorded [ScreenSpot Pro](https://llm-stats.com/benchmar
 - Apple Developer account (free tier works)
 - `maestro-ios-device` (install via `mobile-use install-ios-device`)
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # Install by Cloning
@@ -85,7 +87,7 @@ mobile-use install-maestro
 mobile-use check
 ```
 
-## 📖 Usage
+## Usage
 
 ### Basic Usage
 
@@ -152,7 +154,7 @@ mobile-use com.example.app "Create a note" \
   --app-file /path/to/app.ipa
 ```
 
-## 🔧 Commands
+## Commands
 
 | Command | Description |
 |---------|-------------|
@@ -163,7 +165,7 @@ mobile-use com.example.app "Create a note" \
 | `mobile-use install-ios-device` | Install maestro-ios-device (macOS only) |
 | `mobile-use --help` | Show help information |
 
-## ⚙️ Options
+## Options
 
 | Option | Description | Default |
 |--------|-------------|---------|
@@ -174,7 +176,7 @@ mobile-use com.example.app "Create a note" \
 | `--team-id <id>` | Apple Developer Team ID | - |
 | `--app-file <path>` | Path to .ipa file | - |
 
-## 🎬 Available Actions
+## Available Actions
 
 The AI can perform these actions on your device:
 
@@ -196,7 +198,7 @@ The AI can perform these actions on your device:
 | `launchApp` | Switch to another app | `launchApp("com.other.app")` |
 | `stopApp` | Close an app | `stopApp("com.other.app")` |
 
-## 📱 Physical iOS Device Setup
+## Physical iOS Device Setup
 
 ### Prerequisites
 - macOS with Xcode installed
@@ -282,7 +284,7 @@ mobile-use com.myapp.test "Complete the signup flow" \
   --constraint "Skip optional fields"
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### "Maestro not installed"
 ```bash
@@ -326,8 +328,10 @@ xcrun xctrace list devices
 
 MIT
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Maestro](https://maestro.mobile.dev) - Mobile UI automation framework
 - [OpenAI GPT-5.2 Pro](https://openai.com) - Vision-language model
 - [maestro-ios-device](https://github.com/devicelab-dev/maestro-ios-device) - Physical iOS device support
+
+*In God we trust🙏🏿*
